@@ -1,0 +1,163 @@
+<!<!doctype html>
+<html lang="en">
+  <head>
+    <title>Recherche événements</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="form_rech_even.css">
+    <link rel="stylesheet" href="/var/www/css/bootstrap-grid.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    
+        
+        <div class="navbar-header">    
+        <div class="col-md-12">
+          
+            
+            <a href="/var/www/html/index.html">Retour à l'accueil</a>
+           </div>
+        </div>
+      
+    </div>
+     
+      <div class="container-fluid">
+          <div class="row">
+          <div class="col-md-6" id="criteres">
+          <form class="form-inline" action="form_rech_even.php" method="POST" >
+            <fieldset>
+                <legend>Recherche dans les &eacute;v&eacute;nements</legend> 
+                    <Label for="immeuble">Choix immeuble:</Label><br>
+                    <select name="immeuble" size="2" required>
+                        <option value="270681004W">Vernon 270681004W</option>
+                        <option value="280147001R">Favi&egrave;res 280147001R</option>
+                    </select><br>
+                    <label for="composant">Choix composant:</label><br>
+                    <select name="composant" size="3"required>
+                        <option value="0002">0002 Local maitre chien</option>
+                        <option value="0007">0007 Ordinaire</option>
+                        <option value="0008">0008 ancien foyer</option>
+                        <option value="0009">0009 hangar stockage</option>
+                        <option value="0010">0010 Logement EVAT</option>
+                        <option value="0011">0011 Logement cadre</option>
+                        <option value="0012">0012 Aire de lavage</option>
+                        <option value="0013">0013 Casernement</option>
+                        <option value="0014">0014 Garage</option>
+                        <option value="0015">0015 Incendie</option>
+                        <option value="0016">0016 Surpresseur</option>
+                        <option value="0018">0018 Protec</option>
+                        <option value="0020">0020 PCP</option>
+                        <option value="0021">0021 Technique</option>
+                        <option value="0023">0023 Energie</option>
+                        <option value="0025">0025 Chateau d eau</option>
+                        <option value="0035">0035 Syracuse</option>
+                        <option value="0036">0036 PCE</option>
+                        <option value="0038">0038 Atelier antenne</option>
+                        <option value="0046">0046 Logement cadre</option>
+                        <option value="0048">0048</option>
+                        <option value="0049">0049</option>
+                        <option value="0051">0051</option>
+                        <option value="0052">0052 Villa 3</option>
+                        <option value="0054">0054 Poste de livraison ERDF</option>
+                        <option value="0059">0059 SOCRATE</option>
+                        <option value="0064">0064</option>
+                        <option value="0068">0068 EHF</option>
+                        <option value="0069">0069 TGA1</option>
+                        <option value="0073">0073</option>
+                        <option value="0099">0099 TGA2</option>
+                        <option value="0102">0102 Antenne USID</option>
+                        <option value="0104">0104 EN3</option>
+                    </select><br>
+                    <label for="local"> Choix local:</label><br>
+                    <select name="local" size="3"><br>
+                        <option value="001">001</option>
+                        <option value="002">002</option>
+                        <option value="003">003</option>
+                        <option value="004">004</option>
+                        <option value="005">005</option>
+                        <option value="006">006</option>
+                        <option value="007">007</option>
+                        <option value="008">008</option>
+                        <option value="009">009</option>
+                        <option value="010">010</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                        <option value="020">020</option>
+                        <option value="021">021</option>
+                        <option value="022">022</option>
+                        <option value="023">023 LTM</option>
+                        <option value="024">024</option>
+                        <option value="025">025</option>
+                        <option value="026">026</option>
+                        <option value="027">027</option>
+                        <option value="028">028</option>
+                        <option value="029">029</option>
+                        <option value="030">030</option>
+                        <option value="031">031</option>
+                        <option value="032">032</option>
+                        <option value="033">033</option>
+                        <option value="034">034</option>
+                        <option value="035">035</option>
+                        <option value="036">036</option>
+                        <option value="037">037</option>
+                        <option value="038">038</option>
+                        <option value="039">039</option>
+                        <option value="040">040</option>
+                        <option value="041">041</option>
+                        <option value="042">042</option>
+                        <option value="043">043</option>
+                        <option value="044">044</option>
+                        <option value="045">045</option>
+                        <option value="046">046</option>
+                        <option value="047">047</option>
+                        <option value="048">048 ETNA</option>
+                        <option value="049">049</option>
+                        <option value="050">050 Descartes</option>
+                            
+                    </select><br>
+                    <label for="equipement">Choix &eacute;quipement:</label><br>
+                    <select name="equipement" size="3" required>
+                            <option value="GE1EN2">GE 1 EN2</option>
+                            <option value="GE1EN2">GE 1 EN2</option>*
+                            <option value="GE10023">GE 1 0023</option>
+                            <option value="GE10023">GE 1 0023</option>
+                            <option value="GE10104">GE 1 EN3</option>
+                            <option value="GE10104">GE 1 EN3</option>
+                            </select>
+                </div><br>
+                
+                
+                <div class="col-md-6" id="resultat">
+                    <h2></h2>
+                    <label for="out">R&eacute;sultat</label>
+                    <output></output>
+            </div>
+        </fieldset>
+        <input type="submit"><input type="reset">
+    </form>
+    
+           
+    
+        </div>
+        </div>
+        </div>         
+               
+            
+          
+          
+          
+            <div class="footer" col-md-12>
+                <p>Alk<span style="color:orangered">@</span>sar@INTr<span style="color:orangered">@</span>oueb 2018</p>
+            
+                
+                </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

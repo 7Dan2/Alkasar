@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8" />
+	<link rel="stylsheet" href="form_evenements.css" />
+	<title>formulaire evenements</title>
+</head>
+<body>
+	
+	<header></header>
+	<h1>Formulaire &eacute;v&eacute;nements</h1>
+	
+	<div>
+		<p id="date1"></p>
+			
+	</div>
+	<div class="formulaire">
+		<form name="form_evenements" form action="form_evenements.php"  onsubmit="return validateFormEven()"  method="post">
+<fieldset>
+	<legend>Fiche &eacute;v&eacute;nements</legend>
+	<label for="nom">Nom&nbsp;:</label>
+<select name="nom" id="nom">
+	<option value="breton">Breton</option>
+	<option value="fleury">Fleury</option>
+	<option value="foucher">Foucher</option>
+	<option value="granulant">Granulant</option>
+	<option value="likafia">Likafia</option>
+	<option value="lamulle">Lamulle</option>
+	<option value="mullet">Mullet</option>
+	<option value="teaurai">Teaurai</option>
+</select><br><br>
+	<label for="date">Date&nbsp;<i>(format:YYYY-MM-DD)&nbsp;:</i></label>
+	<input type="date" name="dateOfday" id="date" placeholder="Saisissez la date" autofocus min="2018-01-01" size="14"><br><br>
+	<label for="id">ID&nbsp;<span style="font-size: 6px"></span></label>
+	<input type="number" id="id" name="ID" size="8" min="18010100" max="18121210" placeholder="format YY/JJ/MM/NS"><br><br><hr>
+Immeuble&nbsp;:&nbsp; 
+	<select name="immeuble" size="3">
+		<option value="">Choisissez</option>
+		<option value="270681004W">Vernon 270681004W</option>
+		<option value="280147001R">Favi&egrave;res 280147001R</option>
+	</select>
+Composant&nbsp;:&nbsp;
+	<select name="composant" size="5">
+		<option value="">Choisissez</option>
+		<option value="0002">0002 Local maitre chien</option>
+		<option value="0007">0007 Ordinaire</option>
+		<option value="0008">0008 ancien foyer</option>
+		<option value="0009">0009 hangar stockage</option>
+		<option value="0010">0010 Logement EVAT</option>
+		<option value="0011">0011 Logement cadre</option>
+		<option value="0012">0012 Aire de lavage</option>
+		<option value="0013">0013 Casernement</option>
+		<option value="0014">0014 Garage</option>
+		<option value="0015">0015 Incendie</option>
+		<option value="0016">0016 Surpresseur</option>
+		<option value="0018">0018 Protec</option>
+		<option value="0020">0020 PCP</option>
+		<option value="0021">0021 Technique</option>
+		<option value="0023">0023 Energie</option>
+		<option value="0025">0025 Chateau d eau</option>
+		<option value="0035">0035 Syracuse</option>
+		<option value="0036">0036 PCE</option>
+		<option value="0038">0038 Atelier antenne</option>
+		<option value="0046">0046 Logement cadre</option>
+		<option value="0048">0048</option>
+		<option value="0049">0049</option>
+		<option value="0051">0051</option>
+		<option value="0052">0052 Villa 3</option>
+		<option value="0054">0054 Poste de livraison ERDF</option>
+		<option value="0059">0059 SOCRATE</option>
+		<option value="0064">0064</option>
+		<option value="0068">0068 EHF</option>
+		<option value="0069">0069 TGA1</option>
+		<option value="0073">0073</option>
+		<option value="0099">0099 TGA2</option>
+		<option value="0102">0102 Antenne USID</option>
+		<option value="0104">0104 EN3</option>
+	</select>&nbsp;
+Local&nbsp;:&nbsp;
+	<select name="local" size="5">
+		<option value="">Choisissez</option>
+		<option value="001">001</option>
+		<option value="002">002</option>
+		<option value="003">003</option>
+		<option value="004">004</option>
+		<option value="005">005</option>
+		<option value="006">006</option>
+		<option value="007">007</option>
+		<option value="008">008</option>
+		<option value="009">009</option>
+		<option value="010">010</option>
+		<option value="011">011</option>
+		<option value="012">012</option>
+		<option value="013">013</option>
+		<option value="014">014</option>
+		<option value="015">015</option>
+		<option value="016">016</option>
+		<option value="017">017</option>
+		<option value="018">018</option>
+		<option value="019">019</option>
+		<option value="020">020</option>
+		<option value="021">021</option>
+		<option value="022">022</option>
+		<option value="023">023</option>
+		<option value="024">024</option>
+		<option value="025">025</option>
+		<option value="026">026</option>
+		<option value="027">027</option>
+		<option value="028">028</option>
+		<option value="029">029</option>
+		<option value="030">030</option>
+		<option value="031">031</option>
+		<option value="032">032</option>
+		<option value="033">033</option>
+		<option value="034">034</option>
+		<option value="035">035</option>
+		<option value="036">036</option>
+		<option value="037">037</option>
+		<option value="038">038</option>
+		<option value="039">039</option>
+		<option value="040">040</option>
+		<option value="041">041</option>
+		<option value="042">042</option>
+		<option value="043">043</option>
+		<option value="044">044</option>
+		<option value="045">045</option>
+		<option value="046">046</option>
+		<option value="047">047</option>
+		<option value="048">048</option>
+		<option value="049">049</option>
+		<option value="050">050</option>
+
+	</select><br><br>
+Equipement&nbsp;:<br><select name="equipement" size="10">
+	<option value="">Choisissez</option>
+	<option value="Autre non r&eacute;f&eacute;renc&eacute;">Autre non r&eacute;f&eacute;renc&eacute;</option>
+	<option value="GE 1 / EN2">GE 1 / EN2</option>
+	<option value="GE 2 / EN2">GE 2 / EN2</option>
+	<option value="GE 1 / EN3">GE 1 / EN2</option>
+	<option value="GE 2 / EN3">GE 2 / EN3</option>
+	<option value="GE 1 / 0023">GE 1 / 0023</option>
+	<option value="GE 2 / 0023">GE 2 / 0023</option>
+	<input type="text" name="d&eacute;signation" size="50" placeholder="identifier un equipement non pr&eacute;sent dans la liste"><br>
+	</select><br><br>
+Constat&nbsp;:&nbsp;<br><input type="text" text name="constat" size="90" placeholder="Expliquer le d&eacute;faut"><br><br>
+Mesure(s) prise(s)&nbsp;:&nbsp;<br><input type="mesureprise" text name="mesureprise" size="90" placeholder="Expliquer les actions entreprises"><br><br>
+R&eacute;sultat : <br><input type="text" text name="resultat" size="90" placeholder="Expliquer le r&eacute;sultat"><br><br>
+Compl&eacute;ment :<br><input type="text" name="complement" size="90"><br><br>
+<input type="submit" value="validation">&nbsp;&nbsp;
+<input type="reset" value="Effacement">
+	</fieldset>
+</form>
+</div>
+	
+
+<footer>mise &agrave; jour du formulaire&nbsp;:&nbsp;31/05/2018</footer>
+<script src="date.js"></script>
+<script src="validateFormEven.js"></script>
+</body>
+</html>

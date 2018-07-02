@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+[class*="col-"] {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.col-1 {
+    width: 100%;
+}
+body{
+    background: linear-gradient(white, rgb(255, 155, 119));
+}
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+    width: 100%;
+    }
+}
+section{
+    color: brown;
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+th, td, tr{
+    border: 1px solid black;
+    vertical-align: center;
+}    
+td{
+    text-align: center;
+    background-color: antiquewhite;
+}
+tr{
+    border: 1px solid black;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+table {
+    border-radius: 5px;
+}
+th {
+    background-color: lightskyblue;
+    padding: 5px;
+}
+.tabcenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+.rst{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    border-radius: 5px;
+    color: red;
+}
+.rst:hover{
+    color: white;
+    font-size: 15px;
+}
+.snd {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    border-radius: 5px;
+    color: green;
+}
+.snd:hover{
+    color: white;
+    font-size: 20px;
+    box-shadow: 1px 1px 10px silver;
+}
+.EG th{
+    background: linear-gradient(rgb(130, 196, 31), rgb(43, 156, 43) );
+
+}
+.AC th {
+    background: linear-gradient(lightskyblue, azure ) ;
+}
+.DE th{
+    background: linear-gradient(rgb(253, 216, 6), rgb(255, 102, 0) ) ;
+}
+.CLI th{
+    background: linear-gradient(rgb(201, 234, 255), rgb(192, 252, 252) ) ;
+}
+.GE th {
+    color: white;
+    background: linear-gradient(rgb(238, 138, 66), brown);
+}
+#meteo{
+    background: linear-gradient(yellow, orange);
+}
