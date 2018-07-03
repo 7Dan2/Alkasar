@@ -1,0 +1,71 @@
+html{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 765px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+    width: 100%;
+	}
+}
+h1{
+	text-align: center;
+	font-size: 40px;
+	text-shadow: 0 0 20px grey, 1px 1px 10px orangered;
+	color: white;
+}
+.links {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-content:center;
+ width: auto;
+ height: auto;
+ vertical-align: middle;
+ background-color: blanchedalmond;
+}
+
+.links a {
+	text-decoration: none;
+	display: inline-block;
+	color: white;
+	font-size: 2vw;
+	overflow-wrap: break-word;
+	border: 2px solid brown;
+	width: 50%;
+	height: 100px;
+	background: silver;
+	text-align: center;
+	padding: 8px;
+		}
+.links a:hover {
+background-color: white;
+color: silver;
+}
+.footer {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(255, 68, 0, 0.8);
+	}
+.footer p {
+	border-color: 1px solid black;
+	text-align: center;
+	float: left;
+	}
+.button {
+	background-color: peru;
+	color: ivory;
+	position: absolute;
+	left: 50%;
+	}
+	
+ 
