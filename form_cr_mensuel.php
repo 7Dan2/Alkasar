@@ -37,15 +37,17 @@ $dbName = "Suivi_consommations_energies";
 $conn = new mysqli($servername, $username, $password, $dbName);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection ecou&eacute;e !: " . $conn->connect_error);
+    die("Connection echou&eacute;e !: " . $conn->connect_error);
 }
 echo "Connection r&eacute;ussie !";
 //Inserting datas
 $sql = "INSERT INTO Mensuelle (ID_Mensuelle, Date, h_clim1_EN2, h_clim2_EN2, h_clim1_EMB, h_clim2_EMB, h_clim1_CCR, h_clim2_CCR,
- h_clim1_TEC1, h_clim2_TEC1, h_clim1_TEC2, h_clim2_TEC2, h_clim1_TEC3, h_clim2_TEC3, h_clim3_loc_transfo, h_GF1_A1, h_GF1_B1,
- h_GF2_A1, h_GF2_B1, h_comp-air_dem1_GE_EN2, h_comp-air_dem2, h_GE1_EN2, h_GE2_EN2, h_GE1_EN3, h_GE2, EN3, h_GE1_23, h_GE2_23,
+ h_clim1_TEC1, h_clim2_TEC1, h_clim1_TEC2, h_clim2_TEC2, h_clim1_TEC3, h_clim2_TEC3, h_clim3_loc_transfo, h_clim1_sh_athena, h_clim2_sh_athena,
+ h_clim1_sh_comcept, h_clim2_sh_comcept, h_GF1_A1, h_GF1_B1, h_GF2_A1, h_GF2_B1, h_comp_air_dem1_GE_EN2, h_comp_air_dem2, h_GE1_EN2, h_GE2_EN2, h_GE1_EN3, h_GE2, EN3, h_GE1_23, h_GE2_23,
  h_diesel_vernon, h_diesel_et_asi_vernon, GO_cit1_30k, GO_cit2_30k, GO_cit1_23, GO_cit_VRN)
-VALUES ('$_POST[id]', '$_POST[dateOfday]', '$_POST[en2_1]',  $_POST[en2_2])";
+VALUES ('$_POST[id]', '$_POST[date]', '$_POST[en2_1]',  '$_POST[en2_2]', '$_POST[emb_1]', '$_POST[emb_2]', '$_POST[ccr_1]', '$_POST[ccr_2]', '$_POST[tec1_1]', '$_POST[tec1_2]',
+'$_POST[tec2_1]', '$_POST[tec2_2]', '$_POST[tec3_1]', '$_POST[tec3_2]', '$_POST[localTransfo]', '$_POST[sathena1]', '$_POST[sathena2]', '$_POST[scomcept1]', '$_POST[scomcept2]',
+'$_POST[ge10023]', '$_POST[ge20023]')";
 echo "Donn&eacute;es enregistr&eacute;es dans la base de donn&eacute;es";
 if ($conn->query($sql) === TRUE) {
     $last_id = $conn->insert_id;
@@ -75,6 +77,17 @@ if ($conn->query($sql) === TRUE) {
         <p>Climatiseur&nbsp;2/TEC3&nbsp;:&nbsp;<strong><?php echo $_POST["tec3_2"];?></strong>&nbsp;heures</p>
     <h4>Local transfo</h4>
         <p>Climatiseur&nbsp;3/Local&nbsp;transfo&nbsp;:&nbsp;<strong><?php echo $_POST["localTransfo"];?></strong>&nbsp;heures</p>
+    <h4>Shelter Ath&eacute;na</h4>
+        <p>Climatiseur 1&nbsp;:&nbsp;<strong><?php echo $_POST["sathena1"];?></strong>&nbsp;heures</p>
+        <p>Climatiseur 2&nbsp;:&nbsp;<strong><?php echo $_POST["sathena2"];?></strong>&nbsp;heures</p>
+    <h4>Shelter Comcept</h4>
+        <p>Climatiseur 1&nbsp;:&nbsp;<strong><?php echo $_POST["scomcept1"];?></strong>&nbsp;heures</p>
+        <p>Climatiseur 2&nbsp;:&nbsp;<strong><?php echo $_POST["scomcept2"];?></strong>&nbsp;heures</p>
+<h2>Groupes de production eau glac&eacute;e</h2>
+        <p>GF 1 A1&nbsp;:&nbsp;<strong><?php echo $_POST["gf1a1j"];?></strong>&nbsp;heures</p>
+        <p>GF 1 B1&nbsp;:&nbsp;<strong><?php echo $_POST["gf1b1j"];?></strong>&nbsp;heures</p>
+        <p>GF 2 A1&nbsp;:&nbsp;<strong><?php echo $_POST["gf2a1j"];?></strong>&nbsp;heures</p>
+        <p>GF 1 B1&nbsp;:&nbsp;<strong><?php echo $_POST["gf2b1j"];?></strong>&nbsp;heures</p>
 <h2>Heures de fonctionnement groupes &eacute;lectrog&egrave;nes</h2>
     <p>GE1&nbsp;0023&nbsp;:&nbsp;<strong><?php echo $_POST["ge10023"]?></strong>&nbsp;heures</p>
     <p>GE2&nbsp;0023&nbsp;:&nbsp;<strong><?php echo $_POST["ge20023"]?></strong>&nbsp;heures</p>
