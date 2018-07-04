@@ -1,9 +1,12 @@
 <html>
+    <head>
+        <title>Resume CR mensuel</title>
+    </head>
 <body>
 <?php
 $fp=fopen("cr.txt", "a");
-fwrite($fp, "Compte-rendu");
-fwrite($fp, "mai 2018");
+fwrite($fp, "Compte-rendu du");
+fwrite($fp, $_POST["date"]);
 fwrite($fp, $_POST["nom"]);
 fwrite($fp, $_POST["id"]);
 fwrite($fp, $_POST["en2_1"]);
@@ -20,7 +23,7 @@ fwrite($fp, $_POST["tec3_1"]);
 fwrite($fp, $_POST["tec3_1"]);
 fwrite($fp, $_POST["localTransfo"]);
 ?>
-<H1> Compte-rendu mensuel du <?php echo $_POST["dateOfday"];?></h1>
+<H1> Compte-rendu mensuel du <?php echo $_POST["dateOfday"]?></h1>
 Nom&nbsp;:&nbsp;<?php echo $_POST["nom"]; ?><br>
 ID&nbsp;:&nbsp;<?php echo $_POST["id"];?><hr>
 Vous &ecirc;tes connect&eacute; sur le serveur:&nbsp;<?php echo $_SERVER['REMOTE_ADDR'];?><br>
@@ -80,13 +83,13 @@ if ($conn->query($sql) === TRUE) {
     <p>GE1&nbsp;0104&nbsp;:&nbsp;<strong><?php echo $_POST["ge10104"]?></strong>&nbsp;heures</p>
     <p>GE2&nbsp;0104&nbsp;:&nbsp;<strong><?php echo $_POST["ge20104"]?></strong>&nbsp;heures</p>
 <h2>Consommation fioul</h2>
-    <p>Citerne&nbsp;30000l&nbsp;1&nbsp;:<?php echo $_POST["outlec1"]?></strong>&nbsp;litres</p>
-    <p>Citerne&nbsp;30000l&nbsp;2&nbsp;:<?php echo $_POST["outlec4"]?></strong>&nbsp;litres</p>
-    <p>Citerne&nbsp;20000l&nbsp;1&nbsp;:<?php echo $_POST["outlec2"]?></strong>&nbsp;litres</p>
+    <p>Citerne&nbsp;30000l&nbsp;1&nbsp;:&nbsp;<strong><?php echo $_POST["outlec1"]?></strong>&nbsp;litres</p>
+    <p>Citerne&nbsp;30000l&nbsp;2&nbsp;:&nbsp;<strong><?php echo $_POST["lecture4"]?></strong>&nbsp;litres</p>
+    <p>Citerne&nbsp;20000l&nbsp;1&nbsp;:&nbsp;<strong><?php echo $_POST["lecture2"]?></strong>&nbsp;litres</p>
 <h2>Pneumatique</h2>
-    <p>Compresseur&nbsp;d air CCR&nbsp;:<?php echo $_POST["compccr"]?></strong>&nbsp;heures</p>
-    <p>Compresseur 1 demarrage GE&nbsp;:<?php echo $_POST["comp1demge"]?></strong>&nbsp;heures</p>
-    <p>Compresseur 2 demarrage GE&nbsp;:<?php echo $_POST["comp2demge"]?></strong>&nbsp;heures</p>
+    <p>Compresseur&nbsp;d air CCR&nbsp;:&nbsp;<strong><?php echo $_POST["compccr"]?></strong>&nbsp;heures</p>
+    <p>Compresseur 1 demarrage GE&nbsp;:&nbsp;<strong><?php echo $_POST["comp1demge"]?></strong>&nbsp;heures</p>
+    <p>Compresseur 2 demarrage GE&nbsp;:&nbsp;<strong><?php echo $_POST["comp2demge"]?></strong>&nbsp;heures</p>
 
 
 <footer>
