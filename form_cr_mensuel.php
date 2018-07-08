@@ -1,5 +1,7 @@
 <html>
     <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
         <title>Resume CR mensuel</title>
     </head>
 <body>
@@ -119,7 +121,9 @@ echo date("h:i:sa");
 <?php
 fclose($fp);
 ?>
-
+<button class="btn btn-danger btn-lg" type="reset">Imprimer
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+</button>
 
 </body>
 </html>
