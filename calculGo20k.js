@@ -21,6 +21,7 @@ function calculGo20k()
         19636, 19683, 19730, 19775, 19819, 19861, 19901, 19940, 19976, 20011, 20044, 20073, 20101, 20125, 20148, 20166, 20179];
    
     let fuelRemainInTank;
+    
 /*equivalence pour la cuve 20000litres*/
     switch(roundUpFuelHeightValue)
     {
