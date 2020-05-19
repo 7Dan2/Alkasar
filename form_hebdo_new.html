@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>Hebdomadaire</title>
+        <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" href="form_hebdo.css"/>
+    </head>
+    <body>
+        <div class="col-1">
+            <fieldset>
+                <legend>Formulaire relevés hebdomadaire</legend>
+            <section>
+            <form name="form_rel_hebdo" form action="form_hebdo.php"   method="post" id="formH">
+                <article>
+                    <label for="nom">Nom&nbsp;:&nbsp;</label>
+                    <select name="nom" id="nom" placeholder="Permanent">
+                        <option value="defalut">Choisissez un nom</option>
+                        <option value="fly">Fly</option>
+                        <option value="gnt">Gnt</option>
+                        <option value="tui">Tui</option>
+                    </select>
+                    <!-- <label for="date">Date<i>(format:DD-MM-YYYY)</i>&nbsp;:&nbsp;</label> -->
+                    <label for="date">Date&nbsp;:&nbsp;</label>
+                        <input type="date" id="date" name="dateOfday" autofocus min="2018-01-01" size="14">&nbsp;
+                    <!-- <label for="id">ID <i>(format:YY-MM-ww)&nbsp;:&nbsp;</i></label>
+                        <input type="number" name="id" id="id" maxlength="6"  min="180101" max="181252"><br><hr> -->
+                </article>
+                
+                <!-- <section class="CLI">
+                    <article>
+                        <table>
+                            <tr>
+                            <th colspan="9">Climatiseurs / AERAULIQUE</th>
+                            <th id="meteo">M&eacute;t&eacute;o</th>
+                            </tr>
+                            <tr>
+                            <td>Locaux</td>
+                            <td>TEC1 050</td>
+                            <td>TEC2 049</td>
+                            <td>CCR 024</td>
+                            <td>EMB 030</td>
+                            <td>TEC3 034</td>
+                            <td>Local transfo. 033</td>
+                            <td>EN2 042</td>
+                            <td>Contrôle extraction air HT/BT 045</td>
+                            <td><Label for="tempext">T° ext&eacute;rieure</label></td>
+                            </tr>
+                        <tr>
+                            <td>N° clim.</td>
+                            <td><input type="number" min="1" max="2" name="num_tec1"><br>
+                            <input type="checkbox">HS</td>    
+                            <td><input type="number" min="1" max="2" name="num_tec2"><br>
+                            <input type="checkbox">HS</td>
+                            <td><input type="number" min="1" max="2" name="num_ccr"><br>
+                            <input type="checkbox">HS</td>
+                            <td><input type="number" min="1" max="2" name="num_emb"><br>
+                            <input type="checkbox">HS</td>
+                            <td><input type="number" min="1" max="2" name="num_tec3"><br>
+                            <input type="checkbox">HS</td>
+                            <td><input value="3" name="num_loctrans"><br>
+                            <input type="checkbox">HS</td>
+                            <td><input type="number" min="1" max="2" name="num_en2"><br>
+                            <input type="checkbox">HS</td>      
+                            <td><input type="checkbox">Ok&nbsp;
+                                <input type="checkbox">HS</td>
+                            <td><input type="number" max="50" step="0.1" size="5" id="tempext" name="tempext"></td>
+                        </tr> 
+                        <tr>
+                            <td>T° reprise</td>
+                            <td><input type="number" min="1" max="99" step="0.1" name="tem_tec1"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="tem_tec2"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="tem_ccr"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="tem_emb"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="tem_tec3"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="tem_loctrans"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="tem_en2"></td>
+                            <td></td>
+                            <td><Label for="hrext">Hygro. ext&eacute;rieure</label></td>
+                        </tr>
+                        <tr>
+                            <td>Hygrom&eacute;trie</td>
+                            <td><input type="number" min="1" max="99" step="0.1" name="hr_tec1"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="hr_tec2"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="hr_ccr"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="hr_emb"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="hr_tec3"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="hr_loctrans"></td> 
+                            <td><input type="number" min="1" max="99" step="0.1" name="hr_en2"></td>
+                            <td></td>
+                            <td><input type="number" max="100" step="0.1" size="5" id="hrext" name="hrext"></td> 
+                        </tr>
+                        <tr>
+                            <td>% ouverture VF</td>
+                            <td><input type="number" min="1" max="99" name="vf_tec1"></td> 
+                            <td><input type="number" min="1" max="99" name="vf_tec2"></td> 
+                            <td><input type="number" min="1" max="99" name="vf_ccr"></td> 
+                            <td><input type="number" min="1" max="99" name="vf_emb"></td> 
+                            <td><input type="number" min="1" max="99" name="vf_tec3"></td> 
+                            <td><input type="number" min="1" max="99" name="vf_loctrans"></td> 
+                            <td><input type="number" min="1" max="99" name="vf_en2"></td>      
+                        </tr>
+                    </table>
+                </article>
+            </section> -->
+
+            <!-- <hr> -->
+
+            <!-- <section class="AC">
+                <article>
+                    <table>
+                        <tr>
+                            <th colspan="7">PNEUMATIQUE</th>
+                        </tr>
+                        <tr>
+                            <th colspan="4">COMPRESSEUR CCR</th>
+                            <th colspan="3">PURGE</th>
+                        </tr>
+                        <tr>
+                            <td><label for="horacompccr">Horam&egrave;tre</label></td>
+                            <td><label for="huilcompccr">Niveau huile</label></td>
+                            <td><label for="courcompccr">Courroie</label></td>
+                            <td><label for="cristassch">Cristaux<br>assecheur</label></td>
+                            <td><label for="coffrair">Coffrets</label></td>
+                            <td><label for="btlsair">Bouteilles sas</label></td>
+                            <td><label for="compge">GE</label></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="number" min="1" max="9999" value="3227" id="horacompccr" name="horacompccr"></td>
+                            <td><input type="checkbox" id="huilcompccr" name="huilcompccr">Ok
+                                <input type="checkbox">Compl&eacute;ment</td>
+                            <td><input type="checkbox" id="courcompccr" name="courcompccr">Ok
+                                <input type="checkbox" id="courcompccr">Retendue
+                                <input type="checkbox" id="courcompccr">HS</td>
+                            <td><input type="checkbox" id="cristassch" name="cristassch">Blanc
+                                <input type="checkbox">Autre</td>
+                            <td><input type="checkbox" id="coffrair" name="coffrairtec">TEC
+                                <input type="checkbox" id="coffrair" name="coffrairccr">CCR
+                                <input type="checkbox" id="coffrair" name="coffrairen2">EN2</td>
+                            <td><input type="checkbox" id="btlsair" name="btlsairtec1">TEC1
+                                <input type="checkbox" id="btlsair" name="btlsairccr">CCR
+                                <input type="checkbox" id="btlsair" name="btlsairen2">EN2</td>
+                            <td><input type="checkbox" id="compge" name="compge1">Compresseur 1
+                                <input type="checkbox" id="compge" name="compge2">Compresseur 2</td>
+                        </tr>   
+                        <tr>
+                           <td>Econom&egrave;tres</td>
+                           <td>
+                                <input type="color">gauche
+                                <input type="color">droit
+                            </td>
+                        </tr>    
+                    </table>
+                </article>
+            </section> -->
+
+            <!-- <hr> -->
+
+            <!-- <section class="DE">
+                <article>
+                    <table>
+                        <tr>
+                            <th colspan="4">CENTRALE DEI - SIGNALISATION</th>
+                        </tr>
+                        <tr>
+                            <td>SHELTERS</td>
+                            <td>CCR</td>
+                            <td>EMB</td>
+                            <td>EN2</td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="cmcpt">COMCEPT</label>
+                            <input type="checkbox" id="cmcpt">
+                            <label for="atna">ATHENA</label>
+                            <input type="checkbox" id="atna" name="atna">
+                            <label for="ehf">EHF</label>
+                            <input type="checkbox" id="ehf" name="ehf">
+                            <label for="en3">EN3</label>
+                            <input type="checkbox" id="en3" name="en3">
+                            <label for="tga1">TGA1</label>
+                            <input type="checkbox" id="tga1" name="tga1">
+                            <label for="tga2">TGA2</label>
+                            <input type="checkbox" id="tga2" name="tga2">
+                            </td>
+                            <td>
+                            <label for="ccrs2">S2</label>        
+                            <input type="checkbox" id="ccrs2" name="ccrs2">
+                            <label for="ccrs3">S3</label>
+                            <input type="checkbox" id="ccrs3" name="ccrs3">
+                            <label for="ccrs4">S4</label>
+                            <input type="checkbox" id="ccrs4" name="ccrs4">
+                            <label for="ccrs9">S9</label>
+                            <input type="checkbox" id="ccrs9" name="ccrs9">
+                            <label for="ccrs10">S10</label>
+                            <input type="checkbox" id="ccrs10" name="ccrs10">
+                            <label for="ccrs11">S11</label>
+                            <input type="checkbox" id="ccrs11" name="ccrs11">
+                            <label for="ccrs15">S15</label>
+                            <input type="checkbox" id="ccrs15" name="ccrs15">
+                            </td>
+                            <td>
+                                <label for="embs1">S1</label>
+                                <input type="checkbox" id="embs1">
+                            </td>
+                            <td>
+                                <label for="en2s5">S5</label>
+                                <input type="checkbox" id="en2s5">
+                                <label for="en2s5">S6</label>
+                                <input type="checkbox" id="en2s6">
+                                <label for="en2s5">S7</label>
+                                <input type="checkbox" id="en2s7">
+                                <label for="en2s5">S8</label>
+                                <input type="checkbox" id="en2s8">
+                                <label for="en2s5">S13</label>
+                                <input type="checkbox" id="en2s13">
+                                <label for="en2s5">S14</label>
+                                <input type="checkbox" id="en2s14">
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section> -->
+
+            <!-- <hr> -->
+            
+            <!-- <section class="EG">
+                <article>
+                    <table>
+                        <tr>
+                            <th colspan="8">PRODUCTION EAU GLACEE</th>
+                        </tr>
+                        <tr>
+                            <td>Unit&eacute; en service</td>
+                            <td>Compresseur</td>
+                            <td>Voyant liquide</td>
+                            <td colspan="2"> Circuit huile GF</td>
+                            <td colspan="2">Horam&egrave;tre compresseurs</td>
+                            <td>Compresseur prioritaire</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" size="1"></td>
+                            <td><input type="text" size="1"></td>
+                            <td><input type="checkbox">100% vapeur
+                                <input type="checkbox">Bulles</td>
+                            <td><label for="dispress">Discharge Pressure</label></td>
+                            <td><input type="number" id="dispress" step="0.01"></td>
+                            
+                            <td><label for="gf1a1">GF 1 A1</label></td>
+                            <td><input type="number" id="gf1a1"></td>
+                            <td><input type="checkbox"></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>T° entr&eacute;e</td>
+                            <td>T° sortie</td>
+                            <td>Charge</td>
+                            <td><label for="oilpress">A1/B1 Oil Pressure</label></td>
+                            <td><input type="number" id="oilpress" step="0.01"></td>
+                            <td><label for="gf1b1">GF 1 B1</label></td>
+                            <td><input type="number" id="gf1b1"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" step="0.1"></td>
+                            <td><input type="number" step="0.1"></td>
+                            <td><input type="number" step="0.1"></td>
+                            <td><label for="outoil">&Delta;</label></td>
+                            <td><p id="outoil"></p></td>
+                            <td><label for="gf2a1">GF 2 A1</label></td>
+                            <td><input type="number" id="gf2a1"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="tecond">T° entr&eacute;e condenseur</label></td>
+                            <td><label for="tscond">T° sortie condenseur</label></td>
+                            <td>Pression</td>
+                            <td><label for="peeau">Entr&eacute;e</label></td>
+                            <td><label for="pseau">Sortie</label></td>
+                            <td><label for="gf2b1">GF 2 B1</label></td>
+                            <td><input type="number" id="gf2b1"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                       
+                       
+                        <tr>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                
+                                <td><label for="econd">Condenseur</label><p id="deltaecond"></p></td>
+                                <td><input type="number" id="econd" step="0.1" onblur="deltaEau()"></td>
+                                <td><input type="number" id="scond" step="0.1" onblur="deltaEau()"></td>
+                                
+                        </tr>
+                        <tr>
+                                <td><label for="pvasexp">Pression vase expansion</label></td>
+                                <td><input type="number" step="0.1"></td>
+                                <td><label for="peeg">Eau glac&eacute;e</label><p id="deltaeeg"></p></td>
+                                <td><input type="number" id="peeg" step="0.1" onblur="deltaEau()"></td>
+                                <td><input type="number" id="pseg" step="0.1" onblur="deltaEau()"></td>
+                                
+                        </tr>
+                        <tr></tr>
+                    </table>
+                </article>
+            </section> -->
+
+            <!-- <hr> -->
+            
+            <section class="GE">
+                <article>
+                    <table>
+                        <tr>
+                            <th colspan="5">GROUPES ELECTROGENES EN2</th>
+                        </tr>
+                        <tr>
+                            <td>Niveau d'huile</td>
+                            <td>Niveau liquide de refroidissement</td>
+                            <td>Préchauffage</td>
+                            <td>Chargeur batteries (U >= 1A)</td>
+                            <td>Nettoyage</td>
+                            <!-- <td>Niveau huile compresseur démarrage</td> -->
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">GE1
+                                <input type="checkbox">GE2
+                            </td>
+
+                            <td>
+                                <input type="checkbox">GE1
+                                <input type="checkbox">GE2
+                                
+                            </td>
+                            <td>
+                                <input type="checkbox">GE1
+                                <input type="checkbox">GE2
+                            </td>
+                            <td>
+                                <input type="checkbox">GE1
+                                <input type="checkbox">GE2
+                            </td>
+                            <td>
+                                <input type="checkbox">GE1
+                                <input type="checkbox">GE2
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+
+            <hr/>
+
+            <section class="AC">
+                <article>
+                    <table>
+                        <tr>
+                            <th colspan="4">COMPRESSEUR D'AIR GE</th>
+                        </tr>
+                        <tr>
+                            <td>Niveau d'huile</td>
+                            <td>Pression (p = 20<..>40)</td>
+                            <td>Purge</td>
+                            <td>Nettoyage</td>
+                            <!-- <td>Niveau huile compresseur démarrage</td> -->
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">Compresseur 1
+                                <input type="checkbox">Compresseur 2
+                            </td>
+
+                            <td>
+                                <input type="checkbox">Compresseur 1
+                                <input type="checkbox">Compresseur 2
+                                
+                            </td>
+                            <td>
+                                <input type="checkbox">Compresseur 1
+                                <input type="checkbox">Compresseur 2
+                            </td>
+                            <td>
+                                <input type="checkbox">Compresseur 1
+                                <input type="checkbox">Compresseur 2
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+
+            <hr/>
+
+            <section class="EG">
+                <article>
+                    <table>
+                        <tr>
+                            <th colspan="4">PRODUCTION EAU GLACEE</th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">GROUPE FROID</th>
+                            <th colspan="2">RESEAU EAU GLACEE</th>
+                        </tr>
+
+                        <tr>
+                            <td>Test voyants</td>
+                            <td>Absence de défauts</td>
+                            <td>Vase d'expansion <b>condenseur</b>&nbsp;(1,2< p <2b)</td>
+                            <td>Vase d'expansion <b>évaporateur</b>&nbsp;(1,2< p <2b)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">GF1
+                                <input type="checkbox">GF2
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox">GF1
+                                <input type="checkbox">GF2
+                            </td>
+                           
+                            <td>
+                                <input type="checkbox">VOIE 1
+                                <input type="checkbox">VOIE 2
+                            </td>
+
+                            <td>
+                                <input type="checkbox">VOIE 1
+                                <input type="checkbox">VOIE 2
+                            </td>
+                        </tr>
+                        
+                        
+                    </table>
+                </article>
+            </section> 
+            
+            <hr/>
+
+            <section>
+                <article>
+                    <table>
+                        <tr>
+                            <th colspan="4">Observations</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" size="100" placeholder="Détail">
+                            </td>
+                            
+                        </tr>
+                        
+                    </table>
+                    
+                </article>
+            </section>
+
+            
+    </fieldset>
+
+            <section class="footer">
+                <button type="submit"class="snd">Envoi</button>
+                <button type="reset" class="rst">Effacement</button>
+            </section>
+            <script src="deltaEau.js"></script>
+        </body>    
+</html>
