@@ -14,8 +14,8 @@
         
         <!-- <fieldset> -->
             <!-- <legend>Formulaire Compte rendu mensuel</legend> -->
-        <!-- <div>
-            <form name="form_cr_mensuel" form action="form_cr_mensuel.php"  onsubmit="return validateFormCrmens()"  method="post" id="formCr"> -->
+       
+            <!-- <form name="form_cr_mensuel" form action="form_cr_mensuel.php"  onsubmit="return validateFormCrmens()"  method="post" id="formCr"> -->
         <div class="row">
 
             <div class="col-12 col-s-10">
@@ -31,9 +31,7 @@
                     <input type="date" id="date" name="dateOfday" autofocus min="2018-01-01" size="14">&nbsp;
 
                 <label for="id">ID <i>(format:YY-MM)&nbsp;:&nbsp;</i></label>
-                    <input type="number" name="id" id="id" maxlength="4"  min="1801" max="2112">
-                <h6>version 1.2.2</h6>
-                <br><hr>
+                    <input type="number" name="id" id="id" maxlength="4"  min="1801" max="2112"><br><hr>
             </div>
 
         </div>   
@@ -213,20 +211,20 @@
                             </tr>
                             <tr>
                                 <td><label for="lectureFioul30k1">Citerne 1 <br>(25 980 litres utiles)</label></td>
-                                <td><input type="number" step="0.1" min="1" max="250" placeholder="valeur relev&eacute;e" name="lecture1" id="lectureFioul30k1" class="input30kFuelHeight" ></td>
+                                <td><input type="number" step="0.1" min="1" max="250" name="lecture1" id="lectureFioul30k1" class="input30kFuelHeight" ></td>
                                 <td><p id="fuelRestant30k1" class="fuelRestant" name="fuelRestant30k1"></p></td>
 
                                 <td><label for="lectureFioul20k">Citerne 20000 <br>(17 496 litres utiles)</label></td>
-                                <td><input type="number" step="0.1" min="1" max="248" placeholder="valeur relev&eacute;e" name="lecture2" id="lectureFioul20k"></td>
+                                <td><input type="number" step="0.1" min="1" max="248" name="lecture2" id="lectureFioul20k"></td>
                                 <td><p id="fuelRestant20k" name="fuelRestant20k"></p></td>
                             </tr>
                             <tr>
                                 <td><label for="lectureFioul30k2">Citerne2 <br>(27 600 litres utiles)</label></td>
-                                <td><input type="number" step="0.1" min="1" max="250" placeholder="valeur relev&eacute;e" name="lecture4" id="lectureFioul30k2" class="input30kFuelHeight"></td>
+                                <td><input type="number" step="0.1" min="1" max="250" name="lecture4" id="lectureFioul30k2" class="input30kFuelHeight"></td>
                                 <td><p id="fuelRestant30k2" class="fuelRestant" name="fuelRestant30k2"></p></td>
 
                                 <td><label for="lectureFioul60k">Citerne 60000 <br>(55 m3 utiles)</label></td>
-                                <td><input type="number" step="0.1" min="1" max="250" placeholder="valeur relev&eacute;e" name="lecture3" id="lectureFioul60k"></td>
+                                <td><input type="number" step="0.1" min="1" max="250" name="lecture3" id="lectureFioul60k"></td>
                                 <td><p id="fuelRestant60k" name="fuelRestant60k">Pas de calcul disponible</p></td>
                             </tr>
                             
@@ -239,7 +237,8 @@
         <!-- </fieldset> -->
                 </div>
             </div>
-        </div>      
+        </div> 
+        <!-- </form>      -->
     </div>                      
     <script src="calculGo20k.js"></script>   
     <script src="calculGo30k.js"></script>
