@@ -1,8 +1,9 @@
 //fonction permettant de calculer une soustraction
-function deltaEau(){
-    var dp = document.getElementById("dispress").value;
-    var op = document.getElementById("oilpress").value;
-    var difoil = op - dp;
+function deltaEau()
+{
+    var dischargePressureValue = document.getElementById("dispress").value;
+    var oilPressureValue = document.getElementById("oilpress").value;
+    var difoil = oilPressureValue  - dischargePressureValue;
     var pecond = document.getElementById("econd").value;
     var pscond = document.getElementById("scond").value;
     var difecond = pscond - pecond;

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="form_cr_mensuel-new.css"/>
+    
+    <title>CR mensuel</title>
+</head>
+<body>
+    <div class="container">
+        
+        
+        <!-- <fieldset> -->
+            <!-- <legend>Formulaire Compte rendu mensuel</legend> -->
+       
+            <!-- <form name="form_cr_mensuel" form action="form_cr_mensuel.php"  onsubmit="return validateFormCrmens()"  method="post" id="formCr"> -->
+        <div class="row">
+
+            <div class="col-12 col-s-10">
+                <label for="nom">Nom&nbsp;:&nbsp;</label>
+                    <select name="nom" id="nom" placeholder="S&eacute;lectionnez votre nom">
+                        <option value="Fly">Fly</option>
+                        <option value="Fcr">Fcr</option>
+                        <option value="Gnt">Gnt</option>
+                        <option value="Tui">Tui</option>
+                    </select>
+                        
+                <label for="date">Date<i>(format:DD-MM-YYYY)</i>&nbsp;:&nbsp;</label>
+                    <input type="date" id="date" name="dateOfday" autofocus min="2018-01-01" size="14">&nbsp;
+
+                <label for="id">ID <i>(format:YY-MM)&nbsp;:&nbsp;</i></label>
+                    <input type="number" name="id" id="id" maxlength="4"  min="1801" max="2112"><br><hr>
+            </div>
+
+        </div>   
+
+        <div class="row">
+            </div class=" box">1</div>
+            </div class=" box">2</div>
+            </div class=" box">3</div>
+            </div class=" box">4</div>
+            </div class=" box">5</div>
+            </div class=" box">6</div>
+            </div class=" box">7</div>
+            </div class=" box">8</div>
+
+        </div>
+        
+        <div class="row">
+
+            <div class="CL">
+                <!-- <div class="col-12">
+                    <h2><span>Temps de fonctionnement climatiseurs</span></h2>
+                </div> -->
+                
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="en2_1">Clim 1 EN2</label>
+                    <input type="number" id="en2_1" name="en2_1" size="5"><br/>
+                    <label for="en2_2">Clim 2 EN2</label>
+                    <input type="number" id="en2_2" name="en2_2" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="emb_1">Clim 1 EMB</label>
+                    <input type="number" id="emb_1"name="emb_1" size="5"><br/>
+                    <label for="emb_2">Clim 2 EMB</label>
+                    <input type="number" id="emb_2"name="emb_2" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="ccr_1">Clim 1 CCR</label>
+                    <input type="number" id="ccr_1"name="ccr_1" size="5"><br/>
+                    <label for="ccr_2">Clim 2 CCR</label>
+                    <input type="number" id="ccr_2"name="ccr_2" size="5">
+                </div>
+                
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="tec1_1">Clim 1 TEC1</label>
+                    <input type="number" id="tec1_1" name="tec1_1" size="5"><br/>
+                    <label for="tec1_2">Clim 2 TEC1</label>
+                    <input type="number" id="tec1_2" name="tec1_2" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="tec2_1">Clim 1 TEC2</label>
+                    <input type="number" id="tec2_1" name="tec2_1" size="5"><br/>
+                    <label for="tec2_2">Clim 2 TEC2</label>
+                    <input type="number" id="tec2_2" name="tec2_2" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="tec3_1">Clim 1 TEC3</label>
+                    <input type="number" id="tec3_1" name="tec3_1" size="5"><br/>
+                    <label for="tec3_2">Clim 2 TEC3</label>
+                    <input type="number" id="tec3_2" name="tec3_2" size="5">        
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="cage1_1">Clim 1 CAGE 1</label>
+                    <input type="number" id="cage1_1" name="cage1_1" size="5"><br/>
+                    <label for="cage1_2">Clim 2 CAGE 1</label>
+                    <input type="number" id="cage1_2" name="cage1_2" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="cage2_1">Clim 1 CAGE 2</label>
+                    <input type="number" id="cage2_1" name="cage2_1" size="5"><br/>
+                    <label for="cage2_2">Clim 2 CAGE 2</label>
+                    <input type="number" id="cage2_2" name="cage2_2" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="cage3_1">Clim 1 CAGE 3</label>
+                    <input type="number" id="cage3_1" name="cage3_1" size="5"><br/>
+                    <label for="cage3_2">Clim 2 CAGE 3</label>
+                    <input type="number" id="cage3_2" name="cage3_2" size="5">        
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="loctrans">Local Transfo.</label>
+                    <input type="number" id="loctrans" name="localTransfo" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="sathena1">Clim 1</label>
+                    <input type="number" id="sathena1" name="sathena1" size="5"><br/>
+                    <label for="sathena2">Clim 2</label>
+                    <input type="number" id="sathena2" name="sathena2" size="5">
+                </div>
+                <div class="col-2 col-s-3 col-xs-2">
+                    <label for="scomcept1">Clim 1</label>
+                    <input type="number" id="scomcept1" name="scomcept1" size="5"><br/>
+                    <label for="scomcept2">Clim 2</label>
+                    <input type="number" id="scomcept2" name="scomcept2" size="5">
+                </div>
+               
+
+                
+            </div>
+        </div>
+
+            <div class="row">
+                <div class="EG col-12 col-s-10">
+                    
+                    <h2>Groupes de production d'eau glac&eacute;e</h2>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>Nombre jours(gtc)</th>
+                                <th>Compresseur A1 (heures)</th>
+                                <th>Compresseur B1 (heures)</th>
+                            </tr>
+                            <tr>
+                                <td><label for="gf1j">GF1</label></td>
+                                <td><input type="number" id="gf1j" name="gf1j"></td>
+                                <td><input type="number" id="gf1a1j" name="gf1a1j"></td> 
+                                <td><input type="number" id="gf1b1j" name="gf1b1j"></td>  
+                            </tr>
+                            <tr>
+                                <td><label for="gf2j">GF2</label></td>
+                                <td><input type="number" id="gf2j" name="gf2j"></td>
+                                <td><input type="number" id="gf2j" name="gf2a1j"></td> 
+                                <td><input type="number" id="gf2j" name="gf2b1j"></td>
+                            </tr>
+                        </table>
+                        
+                </div>
+            </div>
+
+        <div class="row">
+
+            <div class="AC col-12 col-s-10">
+                <div>
+                    <h2>Pneumatique</h2>
+                        <table>
+                            <tr>
+                                <th colspan="4">Horam&egrave;tres air comprim&eacute;</th>
+                            </tr>
+                            <tr>
+                                <th><label for="compccr">Compresseur CCR</label></th>
+                                <th><label for="comp1demge">Compresseur 1 démarrage GE</label></th>
+                                <th><label for="comp2demge">Compresseur 2 démarrage GE</label></th>
+                            </tr>
+                            <tr>
+                                <td><input type="number" id="compccr" name="compccr"></td>
+                                <td><input type="number" id="comp1demge" name="comp1demge"></td>
+                                <td><input type="number" id="comp2demge" name="comp2demge"></td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="GE col-12 col-s-10">
+                <div>
+                    <h2>GE et fioul</h2>
+                        <table>
+                            <tr>
+                                <th colspan="6">Horam&egrave;tres GE</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">0023</th>
+                                <th colspan="2">EN2</th>
+                                <th colspan="2">EN3</th>
+                            </tr>
+                            <tr>
+                                <td>GE1</td>
+                                <td>GE2</td>
+                                <td>GE1</td>
+                                <td>GE2</td>
+                                <td>GE1</td>
+                                <td>GE2</td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" id="ge10023" name="ge10023"></td>
+                                <td><input type="number" id="ge20023" name="ge20023"></td>
+                                <td><input type="number" id="ge10035" name="ge10035"></td>
+                                <td><input type="number" id="ge20035" name="ge20035"></td>
+                                <td><input type="number" id="ge10104" name="ge10104"></td>
+                                <td><input type="number" id="ge20104" name="ge20104"></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table>
+                            <tr>
+                                <th colspan="6">Fioul</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" id="c3000">Citernes 30000 litres</th>
+                                <th colspan="3" id="c2000">Citernes centrale 0023</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Hauteur&nbsp;relev&eacute;e&nbsp;&#40;cm&#41;</td>
+                                <td>Combustible&nbsp;restant&nbsp;&#40;litres&#41;</td>
+                                <td></td>
+                                <td>Hauteur&nbsp;relev&eacute;e&nbsp;&#40;cm&#41;</td></td>
+                                <td>Combustible&nbsp;restant&nbsp;&#40;litres&#41;</td>
+                            </tr>
+                            <tr>
+                                <td><label for="lectureFioul30k1">Citerne 1 <br>(25 980 litres utiles)</label></td>
+                                <td><input type="number" step="0.1" min="1" max="250" name="lecture1" id="lectureFioul30k1" class="input30kFuelHeight" ></td>
+                                <td><p id="fuelRestant30k1" class="fuelRestant" name="fuelRestant30k1"></p></td>
+
+                                <td><label for="lectureFioul20k">Citerne 20000 <br>(17 496 litres utiles)</label></td>
+                                <td><input type="number" step="0.1" min="1" max="248" name="lecture2" id="lectureFioul20k"></td>
+                                <td><p id="fuelRestant20k" name="fuelRestant20k"></p></td>
+                            </tr>
+                            <tr>
+                                <td><label for="lectureFioul30k2">Citerne2 <br>(27 600 litres utiles)</label></td>
+                                <td><input type="number" step="0.1" min="1" max="250" name="lecture4" id="lectureFioul30k2" class="input30kFuelHeight"></td>
+                                <td><p id="fuelRestant30k2" class="fuelRestant" name="fuelRestant30k2"></p></td>
+
+                                <td><label for="lectureFioul60k">Citerne 60000 <br>(55 m3 utiles)</label></td>
+                                <td><input type="number" step="0.1" min="1" max="250" name="lecture3" id="lectureFioul60k"></td>
+                                <td><p id="fuelRestant60k" name="fuelRestant60k">Pas de calcul disponible</p></td>
+                            </tr>
+                            
+                        </table>
+                        <hr>
+                        <br><br>
+                            <button type="submit">envoi </button>
+                            <button type="reset">effacement</button>
+            
+        <!-- </fieldset> -->
+                </div>
+            </div>
+        </div> 
+        <!-- </form>      -->
+    </div>                      
+    <script src="calculGo20k.js"></script>   
+    <script src="calculGo30k.js"></script>
+            
+</body>
+</html>
