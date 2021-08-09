@@ -32,11 +32,11 @@ function calculGo30k(value)
 {
 	//La valeur entrée, si elle comporte une décimale, est arrondie à l'entier supérieur
     let roundUpFuelHeightValue = Math.ceil(value);
-    console.log("valeur lue arrondie à l'unité supérieure : " + " " + roundUpFuelHeightValue);
+    //console.log("valeur lue arrondie à l'unité supérieure : " + " " + roundUpFuelHeightValue);
 
 	//On diminue cette valeur de 1 pour faire coîncider avec la matrice des quantités 
     let roundDownToIndex = Math.floor(roundUpFuelHeightValue -1);
-    console.log("Index à rechercher :" + " " + roundDownToIndex);
+    //console.log("Index à rechercher :" + " " + roundDownToIndex);
 
 	//Matrice des quantités pour chaque centimètre
     const fuelQuantityPerCm = [20, 50, 90, 130, 180, 230, 280, 340, 400, 470, 530, 600, 670, 750, 820, 900, 980, 1060, 1150, 1230,
@@ -56,15 +56,14 @@ function calculGo30k(value)
 
 	//Dans une variable, on appelle l'index de la matrice correspondante à la valeur arrondie
     let fuelRemainInTank = fuelQuantityPerCm[roundDownToIndex];
-    console.log("Quantité de produit restant :" + " " + fuelRemainInTank);
     
     //Recupération de l'élément ayant le focus
     const getActiveElement = document.activeElement.id;
-    console.log("Elément actif :" + " " + getActiveElement);
+    //console.log("Elément actif :" + " " + getActiveElement);
 
     //Détermination du pourcentage restant, appel de la fonction de calcul de pourcentage
     let percentLeftInTank = givePercent(getActiveElement, fuelRemainInTank);
-    console.log("Pourcentage restant : " + " " + percentLeftInTank);
+    //console.log("Pourcentage restant : " + " " + percentLeftInTank);
     
         
 	//Adaptation de la sortie en fonction du focus
@@ -106,5 +105,3 @@ function givePercent(tankNumber, aValue)
 	}
 }
 // Fin de la fonction de calcul de pourcentage
-
-//Fin du fichier
