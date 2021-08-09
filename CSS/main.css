@@ -1,24 +1,18 @@
-html
+* 
 {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-*, *:before, *:after
+/* *, *:before, *:after
 {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: border-box;
-}
+} */
 
-@media only screen and (max-width: 765px) 
+.container
 {
-    /* For mobile phones: */
-    [class*="col-"] 
-	{
-    width: 100%;
-	}
+	display: grid;
 }
 
 h1
@@ -43,29 +37,36 @@ img
 	opacity: 1;
 }
 
+/* .links
+{
+	margin: 2px;
+  padding: 2px;
+} */
+
 .links a 
 {
 	text-decoration: none;
 	display: inline-block;
 	color: white;
-	
-	font-size: 1em;
+	padding-top: 35px;
+	padding-bottom: 40px;
+	font-size: 1rem;
 	
 	border: 2px solid brown;
 	border-radius: 20px;
 	width: 100%;
-	height: 100px;
+	height: 90px;
 	background: silver;
 	text-align: center;
-	vertical-align: inherit;
 	
-	margin: 0px;
+	margin-top: 0px;
 }
 
 .links a:hover
 {
 background-color: white;
 color: silver;
+box-shadow: 10 0 10 black;
 }
 
 .intraouebLogo
@@ -106,3 +107,99 @@ color: silver;
 	position: absolute;
 	left: 50%;
 } 
+
+.part
+{
+	background-color: antiquewhite;
+	border: 1px solid red;
+	border-radius: 9px;
+	
+	
+}
+
+/* .subpart
+{
+	width: 100%;
+	height: 100%;
+} */
+
+.vernon
+{
+	background-color: darkseagreen;
+	border-radius: 5px;
+}
+
+.row::after 
+{
+	content: "";
+	clear: both;
+	display: table;
+}
+  
+[class*="col-"]
+{
+	float: left;
+	padding: 15px;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) 
+{
+	[class*="col-"] 
+	{
+		width: 100%;
+	}
+}
+
+/* For tablets: */
+@media only screen and (min-width: 768px) 
+{
+	.col-m-1 {width: 8.33%;}
+	.col-m-2 {width: 16.66%;}
+	.col-m-3 {width: 25%;}
+	.col-m-4 {width: 33.33%;}
+	.col-m-5 {width: 41.66%;}
+	.col-m-6 {width: 50%;}
+	.col-m-7 {width: 58.33%;}
+	.col-m-8 {width: 66.66%;}
+	.col-m-9 {width: 75%;}
+	.col-m-10 {width: 83.33%;}
+	.col-m-11 {width: 91.66%;}
+	.col-m-12 {width: 100%;}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 992px) 
+{
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+}
+
+/* For large screen */
+@media only screen and (min-width: 1300px)
+{
+	.col-lg-1 {width: 8.33%;}
+	.col-lg-2 {width: 16.66%;}
+	.col-lg-3 {width: 25%;}
+	.col-lg-4 {width: 33.33%;}
+	.col-lg-5 {width: 41.66%;}
+	.col-lg-6 {width: 50%;}
+	.col-lg-7 {width: 58.33%;}
+	.col-lg-8 {width: 66.66%;}
+	.col-lg-9 {width: 75%;}
+	.col-lg-10 {width: 83.33%;}
+	.col-lg-11 {width: 91.66%;}
+	.col-lg-12 {width: 100%;}
+}
+  
+  
